@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Stock Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>📈 Real-Time Stock Analysis</h1>
+
+        <div class="search-container">
+            <input type="text" id="stockTicker" placeholder="Enter Stock Symbol (e.g., TSLA)">
+            <button onclick="fetchStockData()">Analyze</button>
+        </div>
+
+        <div id="loading" class="hidden">Fetching Data...</div>
+
+        <div class="result-container">
+            <h2>🔍 Stock Data</h2>
+            <pre id="stockData"></pre>
+
+            <h2>📰 Real-Time Market News</h2>
+            <pre id="marketNews"></pre>
+
+            <h2>📊 Analyzed Data</h2>
+            <pre id="analysisData"></pre>
+
+            <h2>📌 Recommended Action</h2>
+            <pre id="recommendationData"></pre>
+        </div>
+    </div>
+
+</body>
+</html>
